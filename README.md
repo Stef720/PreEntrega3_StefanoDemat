@@ -1,8 +1,8 @@
 # Proyecto Coderhouse
 
-Comisión:
+Comisión: 54135
 
-Alumno:
+Alumno: Stefano Demat
 
 ## Acerca del proyecto
 
