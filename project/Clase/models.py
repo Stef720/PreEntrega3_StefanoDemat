@@ -28,11 +28,3 @@ class Comision(models.Model):
     
     def __str__(self) -> str:
         return str(self.nombre)
-    
-# Con ManyToMany evitamos crear el siguiente modelo
-# class EstudiantePorComision(models.Model):
-#     comision = models.ForeignKey(Comision, on_delete=models.SET_NULL, null=True, blank=True)
-#     estudiante = models.ForeignKey(Estudiante, on_delete=models.SET_NULL, null=True, blank=True)
-    
-#     def __str__(self) -> str:
-#         return str(self.comision)

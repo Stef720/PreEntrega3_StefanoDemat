@@ -1,12 +1,37 @@
 {% extends 'core/base.html' %}
 
 {% block title %}
-    Comisiones
+    <nav class="navbar navbar-light bg-light static-top">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'Clase:menu' %}">Inicio</a>
+            <a class="navbar-brand" href="{% url 'Clase:profesores' %}">Profesores</a>
+            <a class="navbar-brand" href="{% url 'Clase:cursos' %}">Cursos</a>
+            <a class="navbar-brand" href="{% url 'Clase:estudiantes' %}">Estudiantes</a>
+            <a class="navbar-brand" href="{% url 'Clase:comisiones' %}">Comisiones</a>
+        </div>
+    </nav>
 {% endblock title %}
 
 {% block content %}
+
+    <h3>Buscar comisión:</h3>
+
+    <form action="/Clase/buscar/" method="GET">
+
+        <input type="text" name="comisiones" id="comisiones">
+        <input type="submit" value="Buscar">
+
+    </form>
+
+    {% if comisiones %}
+
+        <p>Estamos la comisión: {{ comision }}</p>
+
     {% for comision in comisiones %}
+
         <p>{{ comision.nombre }} | {{ comision.curso }} | {{ comision.profesor }}</p>
-        <p>{{ comision.estudiante }}</p>
+
     {% endfor %}
+
+    {% endif %}
 {% endblock content %}

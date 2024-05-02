@@ -39,8 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core',
     'Clase',
-    'CargarDatos',
-    'VerDatos',
 ]
 
 MIDDLEWARE = [

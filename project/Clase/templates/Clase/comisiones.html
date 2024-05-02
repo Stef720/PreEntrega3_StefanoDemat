@@ -1,0 +1,43 @@
+{% extends "core/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+    <h1>Comisiones</h1>
+    <p>Aquí está la información de las Comisiones</p>  
+
+    {% for comision in comisiones %}
+
+        <p>{{ comision.nombre }} | {{ comision.curso }} | {{ comision.profesor }}</p>
+
+    {% endfor %}
+
+    <h1>Cursos</h1>
+    <p>Aquí está la información de los Cursos</p>  
+
+    {% for curso in cursos %}
+
+        <p>{{ curso.nombre }}</p>
+
+    {% endfor %}
+
+    <h1>Profesores</h1>
+    <p>Aquí está la información de los Profesores</p>  
+
+    {% for profesor in profesores %}
+
+        <p>{{ profesor.nombre }}</p>
+
+    {% endfor %}
+
+    <h1>Estudiantes</h1>
+    <p>Aquí está la información de los Estudiantes</p>  
+
+    {% for estudiante in estudiantes %}
+
+    <p>{{ estudiantes.nombre }}</p>
+
+    {% endfor %}
+
+{% endblock %}
